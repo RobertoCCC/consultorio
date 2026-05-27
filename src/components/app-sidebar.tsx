@@ -32,7 +32,7 @@ import { logoutAction } from "@/lib/actions/auth";
 const nav = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/pacientes", label: "Pacientes", icon: Users },
-  { href: "/marcacoes", label: "Marcacoes", icon: Calendar },
+  { href: "/marcacoes/calendario", label: "Marcacoes", icon: Calendar },
   { href: "/servicos", label: "Servicos", icon: Wrench },
   { href: "/faturacao", label: "Faturacao", icon: Receipt },
 ];
