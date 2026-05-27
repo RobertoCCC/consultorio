@@ -1,5 +1,7 @@
 import Link from "next/link";
+import { Download } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import {
   Table,
@@ -125,13 +127,14 @@ export default async function FaturacaoPage({
               <TableHead className="text-right">IVA</TableHead>
               <TableHead className="text-right">Total</TableHead>
               <TableHead>Estado</TableHead>
+              <TableHead className="text-right">PDF</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {invoices.length === 0 ? (
               <TableRow>
                 <TableCell
-                  colSpan={7}
+                  colSpan={8}
                   className="text-center text-muted-foreground py-12"
                 >
                   Sem faturas neste filtro.
@@ -172,6 +175,23 @@ export default async function FaturacaoPage({
                     <Badge variant={statusVariant[inv.status]}>
                       {statusLabel[inv.status]}
                     </Badge>
+                  </TableCell>
+                  <TableCell className="text-right">
+                    <Button
+                      variant="ghost"
+                      size="sm"
+                      render={
+                        <a
+                          href={`/api/faturas/${inv.id}/pdf`}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          aria-label={`Ver PDF da fatura ${inv.number}`}
+                        />
+                      }
+                    >
+                      <Download className="h-4 w-4" />
+                      PDF
+                    </Button>
                   </TableCell>
                 </TableRow>
               ))
