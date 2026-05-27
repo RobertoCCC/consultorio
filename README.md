@@ -2,8 +2,8 @@
 
 > Practice management SaaS for small clinics, law offices, and professional consultancies in Portugal.
 
+**Live demo:** [consultorio-theta.vercel.app](https://consultorio-theta.vercel.app)
 **Demo login:** `demo@consultorio.pt` / `demo1234`
-**Live demo:** _coming soon (Vercel deploy in progress)_
 
 A foundational SaaS demonstrating a modern Next.js 16 stack applied to a real PME (small/medium business) problem: managing appointments, clients, services, and invoices in one place. Built as a portfolio piece by a Portuguese software development company.
 
