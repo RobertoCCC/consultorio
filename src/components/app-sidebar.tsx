@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   Calendar,
+  CalendarDays,
   LayoutDashboard,
   LogOut,
   Receipt,
@@ -32,10 +33,27 @@ import { logoutAction } from "@/lib/actions/auth";
 const nav = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/pacientes", label: "Pacientes", icon: Users },
-  { href: "/marcacoes/calendario", label: "Marcacoes", icon: Calendar },
+  { href: "/marcacoes", label: "Marcacoes", icon: Calendar },
+  { href: "/marcacoes/calendario", label: "Calendario", icon: CalendarDays },
   { href: "/servicos", label: "Servicos", icon: Wrench },
   { href: "/faturacao", label: "Faturacao", icon: Receipt },
 ];
+
+/**
+ * Active state que respeita prefixos: se `pathname` faz match com um item
+ * mais especifico (ex: /marcacoes/calendario), o item generico (/marcacoes)
+ * nao e considerado ativo.
+ */
+function isItemActive(itemHref: string, pathname: string): boolean {
+  if (pathname === itemHref) return true;
+  if (!pathname.startsWith(itemHref + "/")) return false;
+  return !nav.some(
+    (other) =>
+      other.href !== itemHref &&
+      other.href.length > itemHref.length &&
+      (pathname === other.href || pathname.startsWith(other.href + "/")),
+  );
+}
 
 function getInitials(name: string): string {
   return name
@@ -74,7 +92,7 @@ export function AppSidebar({
           <SidebarGroupContent>
             <SidebarMenu>
               {nav.map((item) => {
-                const active = pathname.startsWith(item.href);
+                const active = isItemActive(item.href, pathname);
                 return (
                   <SidebarMenuItem key={item.href}>
                     <SidebarMenuButton
