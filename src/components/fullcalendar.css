@@ -1,0 +1,75 @@
+/* Override FullCalendar defaults to match shadcn theme */
+
+.fc {
+  font-family: var(--font-sans), sans-serif;
+  font-size: 0.875rem;
+}
+
+.fc .fc-toolbar-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+
+.fc .fc-button {
+  background-color: hsl(var(--muted) / 1);
+  color: hsl(var(--foreground) / 1);
+  border: 1px solid hsl(var(--border) / 1);
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 0.35rem 0.65rem;
+  text-transform: capitalize;
+  box-shadow: none;
+}
+
+.fc .fc-button:hover {
+  background-color: hsl(var(--accent) / 1);
+}
+
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:not(:disabled):active {
+  background-color: hsl(var(--primary) / 1);
+  color: hsl(var(--primary-foreground) / 1);
+  border-color: hsl(var(--primary) / 1);
+}
+
+.fc .fc-button:focus,
+.fc .fc-button-primary:focus {
+  box-shadow: 0 0 0 3px hsl(var(--ring) / 0.3);
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th,
+.fc-theme-standard .fc-scrollgrid {
+  border-color: hsl(var(--border) / 1);
+}
+
+.fc .fc-col-header-cell-cushion,
+.fc .fc-daygrid-day-number {
+  color: hsl(var(--muted-foreground) / 1);
+  text-decoration: none;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.fc .fc-timegrid-slot-label-cushion,
+.fc .fc-timegrid-axis-cushion {
+  color: hsl(var(--muted-foreground) / 1);
+  font-size: 0.75rem;
+}
+
+.fc .fc-day-today {
+  background-color: hsl(var(--accent) / 0.4) !important;
+}
+
+.fc-event {
+  border-radius: 4px;
+  font-size: 0.75rem;
+  padding: 2px 4px;
+  cursor: pointer;
+  border-width: 0;
+}
+
+.fc-event:hover {
+  opacity: 0.9;
+}

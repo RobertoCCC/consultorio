@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { endOfDay, endOfWeek, startOfDay, startOfWeek } from "date-fns";
-import { Plus } from "lucide-react";
+import { CalendarDays, Plus } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -105,10 +105,19 @@ export default async function MarcacoesPage({
             {appointments.length === 1 ? "marcacao" : "marcacoes"}
           </p>
         </div>
-        <Button render={<Link href="/marcacoes/nova" />}>
-          <Plus className="h-4 w-4" />
-          Nova marcacao
-        </Button>
+        <div className="flex items-center gap-2">
+          <Button
+            variant="outline"
+            render={<Link href="/marcacoes/calendario" />}
+          >
+            <CalendarDays className="h-4 w-4" />
+            Ver calendario
+          </Button>
+          <Button render={<Link href="/marcacoes/nova" />}>
+            <Plus className="h-4 w-4" />
+            Nova marcacao
+          </Button>
+        </div>
       </div>
 
       <div className="flex flex-col gap-3">

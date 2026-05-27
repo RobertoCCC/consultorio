@@ -6,7 +6,7 @@ import { AppointmentForm } from "@/components/appointment-form";
 import { prisma } from "@/lib/prisma";
 import { verifySession } from "@/lib/dal";
 
-type SearchParams = Promise<{ patientId?: string }>;
+type SearchParams = Promise<{ patientId?: string; startsAt?: string }>;
 
 export default async function NovaMarcacaoPage({
   searchParams,
@@ -14,7 +14,7 @@ export default async function NovaMarcacaoPage({
   searchParams: SearchParams;
 }) {
   await verifySession();
-  const { patientId } = await searchParams;
+  const { patientId, startsAt } = await searchParams;
 
   const [patients, services, staff] = await Promise.all([
     prisma.patient.findMany({
@@ -63,6 +63,7 @@ export default async function NovaMarcacaoPage({
             services={services}
             staff={staff}
             presetPatientId={patientId}
+            presetStartsAt={startsAt}
           />
         </CardContent>
       </Card>

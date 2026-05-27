@@ -67,12 +67,14 @@ export function AppointmentForm({
   services,
   staff,
   presetPatientId,
+  presetStartsAt,
 }: {
   appointment?: AppointmentLite | null;
   patients: PatientOption[];
   services: ServiceOption[];
   staff: StaffOption[];
   presetPatientId?: string;
+  presetStartsAt?: string;
 }) {
   const isEdit = !!appointment;
   const action = isEdit
@@ -106,7 +108,9 @@ export function AppointmentForm({
 
   const startsAtDefault =
     state.values?.startsAt ??
-    (appointment ? toDateTimeLocal(appointment.startsAt) : defaultStartsAt());
+    (appointment
+      ? toDateTimeLocal(appointment.startsAt)
+      : presetStartsAt ?? defaultStartsAt());
 
   const notesDefault = state.values?.notes ?? appointment?.notes ?? "";
 
