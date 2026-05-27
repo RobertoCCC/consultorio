@@ -35,7 +35,7 @@ Only UI strings change between verticals.
 
 **Services.** Catalog with five KPIs per service including total revenue (sum of paid invoice lines linked to it). Create / edit / delete with an active toggle (inactive services are excluded from new appointments). Foreign-key constraint failures on delete are caught and surfaced as a toast suggesting deactivation instead.
 
-**Appointments.** List with combined filters (period: future / today / this week / past / all; status: scheduled / completed / cancelled / no-show). Form with controlled selects for patient / service / staff and auto-fill of duration from the chosen service. Contextual status workflow on the detail page (mark completed, mark no-show, cancel, re-schedule).
+**Appointments.** List with combined filters (period: future / today / this week / past / all; status: scheduled / completed / cancelled / no-show), plus a weekly / monthly / daily calendar view powered by FullCalendar. Form with controlled selects for patient / service / staff and auto-fill of duration from the chosen service. Contextual status workflow on the detail page (mark completed, mark no-show, cancel, re-schedule).
 
 **Invoicing.** List with status filter and three aggregate summary cards (issued / paid / void totals via `prisma.invoice.groupBy`). Detail page with line items, IVA at 23%, and totals. Status workflow (draft / issued / paid / void). On-demand A4 PDF generation using `@react-pdf/renderer` served via `/api/faturas/[id]/pdf`.
 
@@ -43,7 +43,6 @@ Only UI strings change between verticals.
 
 ## Not in scope (deliberately)
 
-- **Calendar view** for appointments. The list view with filters covers the same data; a `FullCalendar.io` integration is a polish item.
 - **Multi-tenancy.** Current scope is one practice per deployment; the schema would need an `Organization` model to scope reads.
 - **SAF-T export** and other Portuguese tax compliance specifics.
 - **Manual invoice creation** UI. The seed populates 15 invoices and the demo focuses on the read / PDF / status flow; invoice generation would normally be triggered by appointment completion in production.
