@@ -114,7 +114,7 @@ export async function updateAppointmentStatus(
 ): Promise<void> {
   await verifySession();
   if (!APPOINTMENT_STATUSES.includes(status)) {
-    throw new Error("Status invalido");
+    throw new Error("Status inválido");
   }
   await prisma.appointment.update({
     where: { id },

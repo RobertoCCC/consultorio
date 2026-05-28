@@ -27,7 +27,7 @@ type Params = Promise<{ id: string }>;
 
 const statusLabel: Record<string, string> = {
   SCHEDULED: "Agendada",
-  COMPLETED: "Concluida",
+  COMPLETED: "Concluída",
   CANCELLED: "Cancelada",
   NO_SHOW: "Faltou",
 };
@@ -42,7 +42,7 @@ const statusVariant: Record<
   NO_SHOW: "outline",
 };
 
-export default async function ServicoDetailPage({
+export default async function ServiçoDetailPage({
   params,
 }: {
   params: Params;
@@ -85,12 +85,12 @@ export default async function ServicoDetailPage({
 
   const kpis = [
     {
-      label: "Marcacoes totais",
+      label: "Marcações totais",
       value: String(service._count.appointments),
       icon: Calendar,
     },
     {
-      label: "Concluidas",
+      label: "Concluídas",
       value: String(completedCount),
       icon: Wrench,
     },
@@ -110,7 +110,7 @@ export default async function ServicoDetailPage({
           render={<Link href="/servicos" />}
         >
           <ArrowLeft className="h-4 w-4" />
-          Servicos
+          Serviços
         </Button>
         <div className="flex items-center gap-2">
           <Button
@@ -146,7 +146,7 @@ export default async function ServicoDetailPage({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
-              Duracao
+              Duração
             </CardTitle>
             <Clock className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
@@ -163,7 +163,7 @@ export default async function ServicoDetailPage({
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
             <CardTitle className="text-sm font-medium text-muted-foreground">
-              Preco
+              Preço
             </CardTitle>
             <Tag className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
@@ -193,16 +193,16 @@ export default async function ServicoDetailPage({
         <CardHeader>
           <CardTitle className="text-base flex items-center gap-2">
             <Calendar className="h-4 w-4" />
-            Marcacoes recentes
+            Marcações recentes
           </CardTitle>
           <CardDescription>
-            Ultimas {recentAppointments.length} marcacoes deste servico
+            Últimas {recentAppointments.length} marcacoes deste serviço
           </CardDescription>
         </CardHeader>
         <CardContent>
           {recentAppointments.length === 0 ? (
             <p className="text-sm text-muted-foreground py-4">
-              Sem marcacoes para este servico.
+              Sem marcações para este servico.
             </p>
           ) : (
             <ul className="divide-y -mx-6">

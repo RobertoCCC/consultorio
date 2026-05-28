@@ -51,10 +51,10 @@ export default async function EditarMarcacaoPage({
 
       <div>
         <h2 className="text-2xl font-semibold tracking-tight">
-          Editar marcacao
+          Editar marcação
         </h2>
         <p className="text-sm text-muted-foreground">
-          Actualize os dados da marcacao.
+          Atualize os dados da marcação.
         </p>
       </div>
 

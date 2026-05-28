@@ -5,7 +5,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { ServiceForm } from "@/components/service-form";
 import { verifySession } from "@/lib/dal";
 
-export default async function NovoServicoPage() {
+export default async function NovoServiçoPage() {
   await verifySession();
 
   return (
@@ -22,9 +22,9 @@ export default async function NovoServicoPage() {
       </div>
 
       <div>
-        <h2 className="text-2xl font-semibold tracking-tight">Novo servico</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Novo serviço</h2>
         <p className="text-sm text-muted-foreground">
-          Adiciona um servico ao catalogo (consulta, exame, tratamento...).
+          Adiciona um serviço ao catálogo (consulta, exame, tratamento...).
         </p>
       </div>
 

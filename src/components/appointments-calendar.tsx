@@ -59,7 +59,7 @@ export function AppointmentsCalendar({ events }: { events: CalendarEvent[] }) {
       slotLabelInterval="01:00"
       buttonText={{
         today: "Hoje",
-        month: "Mes",
+        month: "Mês",
         week: "Semana",
         day: "Dia",
       }}

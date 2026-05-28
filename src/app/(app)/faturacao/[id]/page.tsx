@@ -84,7 +84,7 @@ export default async function FaturaDetailPage({
           render={<Link href="/faturacao" />}
         >
           <ArrowLeft className="h-4 w-4" />
-          Faturacao
+          Faturação
         </Button>
         <Button
           variant="outline"
@@ -164,7 +164,7 @@ export default async function FaturaDetailPage({
             <TableRow>
               <TableHead>Descricao</TableHead>
               <TableHead className="text-right">Qtd</TableHead>
-              <TableHead className="text-right">Preco unit.</TableHead>
+              <TableHead className="text-right">Preço unit.</TableHead>
               <TableHead className="text-right">Total</TableHead>
             </TableRow>
           </TableHeader>

@@ -2,8 +2,8 @@ import { z } from "zod";
 
 const cuid = z
   .string()
-  .min(1, "Campo obrigatorio")
-  .regex(/^c[a-z0-9]{20,}$/, "ID invalido");
+  .min(1, "Campo obrigatório")
+  .regex(/^c[a-z0-9]{20,}$/, "ID inválido");
 
 export const appointmentSchema = z.object({
   patientId: cuid,
@@ -16,14 +16,14 @@ export const appointmentSchema = z.object({
     .min(1, "Data e hora obrigatorias")
     .regex(
       /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}/,
-      "Data ou hora invalida",
+      "Data ou hora inválida",
     ),
 
   durationMinutes: z.coerce
-    .number({ message: "Duracao invalida" })
-    .int("Duracao tem de ser um numero inteiro")
-    .min(5, "Duracao minima 5 minutos")
-    .max(480, "Duracao maxima 8 horas"),
+    .number({ message: "Duração inválida" })
+    .int("Duração tem de ser um número inteiro")
+    .min(5, "Duração minima 5 minutos")
+    .max(480, "Duração máxima 8 horas"),
 
   notes: z.string().trim().max(1000, "Notas demasiado longas").optional(),
 });

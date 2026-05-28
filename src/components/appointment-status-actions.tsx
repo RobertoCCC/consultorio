@@ -4,8 +4,8 @@ import { updateAppointmentStatus } from "@/lib/actions/appointment";
 import type { AppointmentStatusValue } from "@/lib/validations/appointment";
 
 /**
- * Server component com forms inline -- nao precisa de JS no cliente.
- * Mostra acoes contextuais consoante o status actual da marcacao.
+ * Server component com forms inline -- não precisa de JS no cliente.
+ * Mostra acoes contextuais consoante o status actual da marcação.
  */
 export function AppointmentStatusActions({
   appointmentId,

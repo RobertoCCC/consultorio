@@ -90,7 +90,7 @@ export function ServiceForm({ service }: { service?: ServiceLite | null }) {
 
         <div className="grid gap-2">
           <Label htmlFor="durationMinutes">
-            Duracao (minutos) <span className="text-destructive">*</span>
+            Duração (minutos) <span className="text-destructive">*</span>
           </Label>
           <Input
             id="durationMinutes"
@@ -108,7 +108,7 @@ export function ServiceForm({ service }: { service?: ServiceLite | null }) {
 
         <div className="grid gap-2">
           <Label htmlFor="priceEur">
-            Preco (EUR) <span className="text-destructive">*</span>
+            Preço (EUR) <span className="text-destructive">*</span>
           </Label>
           <Input
             id="priceEur"
@@ -131,7 +131,7 @@ export function ServiceForm({ service }: { service?: ServiceLite | null }) {
             name="description"
             defaultValue={v("description")}
             rows={3}
-            placeholder="Detalhes do servico..."
+            placeholder="Detalhes do serviço..."
             aria-invalid={!!state.errors?.description}
           />
           <FieldError messages={state.errors?.description} />
@@ -145,10 +145,10 @@ export function ServiceForm({ service }: { service?: ServiceLite | null }) {
           />
           <div className="flex flex-col">
             <Label htmlFor="active" className="cursor-pointer">
-              Servico ativo
+              Serviço ativo
             </Label>
             <span className="text-xs text-muted-foreground">
-              Servicos inativos nao aparecem ao criar novas marcacoes.
+              Serviços inativos não aparecem ao criar novas marcacoes.
             </span>
           </div>
         </div>
@@ -168,8 +168,8 @@ export function ServiceForm({ service }: { service?: ServiceLite | null }) {
           {isPending
             ? "A guardar..."
             : isEdit
-              ? "Guardar alteracoes"
-              : "Criar servico"}
+              ? "Guardar alterações"
+              : "Criar serviço"}
         </Button>
       </div>
     </form>

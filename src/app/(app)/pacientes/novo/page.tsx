@@ -26,7 +26,7 @@ export default async function NovoPacientePage() {
           Novo paciente
         </h2>
         <p className="text-sm text-muted-foreground">
-          Preencha os dados do paciente. Apenas o nome e obrigatorio.
+          Preencha os dados do paciente. Apenas o nome e obrigatório.
         </p>
       </div>
 

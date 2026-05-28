@@ -73,7 +73,7 @@ export default async function FaturacaoPage({
   return (
     <div className="flex flex-col gap-6">
       <div>
-        <h2 className="text-2xl font-semibold tracking-tight">Faturacao</h2>
+        <h2 className="text-2xl font-semibold tracking-tight">Faturação</h2>
         <p className="text-sm text-muted-foreground">
           {invoices.length}{" "}
           {invoices.length === 1 ? "fatura" : "faturas"}
@@ -120,7 +120,7 @@ export default async function FaturacaoPage({
         <Table>
           <TableHeader>
             <TableRow>
-              <TableHead>Numero</TableHead>
+              <TableHead>Número</TableHead>
               <TableHead>Data</TableHead>
               <TableHead>Cliente</TableHead>
               <TableHead className="text-right">Subtotal</TableHead>

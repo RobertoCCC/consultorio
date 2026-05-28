@@ -34,7 +34,7 @@ type InvoicePDFData = {
 
 // Dados ficticios do emissor -- em producao viriam de uma tabela Organization.
 const ISSUER = {
-  name: "Consultorio Demo, Lda.",
+  name: "Consultório Demo, Lda.",
   nif: "500000000",
   address: "Rua Exemplo, 123, 1100-000 Lisboa",
   email: "geral@consultorio.pt",
@@ -209,12 +209,12 @@ function formatEur(cents: number): string {
 }
 
 function formatNif(nif: string | null): string {
-  if (!nif) return "—";
+  if (!nif) return "-";
   return nif.replace(/(\d{3})(\d{3})(\d{3})/, "$1 $2 $3");
 }
 
 function formatDate(date: Date | null): string {
-  if (!date) return "—";
+  if (!date) return "-";
   const d = new Date(date);
   const pad = (n: number) => String(n).padStart(2, "0");
   return `${pad(d.getDate())}/${pad(d.getMonth() + 1)}/${d.getFullYear()}`;
@@ -269,7 +269,7 @@ export function InvoicePDF({ invoice }: { invoice: InvoicePDFData }) {
           <View style={styles.tableHeader}>
             <Text style={[styles.th, styles.cellDesc]}>Descricao</Text>
             <Text style={[styles.th, styles.cellQty]}>Qtd</Text>
-            <Text style={[styles.th, styles.cellPrice]}>Preco unit.</Text>
+            <Text style={[styles.th, styles.cellPrice]}>Preço unit.</Text>
             <Text style={[styles.th, styles.cellTotal]}>Total</Text>
           </View>
           {invoice.lines.map((line) => (

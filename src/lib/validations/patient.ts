@@ -9,14 +9,14 @@ export const patientSchema = z.object({
   name: z
     .string()
     .trim()
-    .min(2, "Nome muito curto (minimo 2 caracteres)")
+    .min(2, "Nome muito curto (mínimo 2 caracteres)")
     .max(120, "Nome demasiado longo"),
 
   email: z
     .string()
     .trim()
     .max(120, "Email demasiado longo")
-    .email("Email invalido")
+    .email("Email inválido")
     .or(z.literal(""))
     .optional(),
 
@@ -24,7 +24,7 @@ export const patientSchema = z.object({
 
   birthDate: z
     .string()
-    .regex(/^(\d{4}-\d{2}-\d{2})?$/, "Data invalida (formato YYYY-MM-DD)")
+    .regex(/^(\d{4}-\d{2}-\d{2})?$/, "Data inválida (formato YYYY-MM-DD)")
     .optional(),
 
   nif: z

@@ -33,16 +33,16 @@ import { logoutAction } from "@/lib/actions/auth";
 const nav = [
   { href: "/dashboard", label: "Dashboard", icon: LayoutDashboard },
   { href: "/pacientes", label: "Pacientes", icon: Users },
-  { href: "/marcacoes", label: "Marcacoes", icon: Calendar },
-  { href: "/marcacoes/calendario", label: "Calendario", icon: CalendarDays },
-  { href: "/servicos", label: "Servicos", icon: Wrench },
-  { href: "/faturacao", label: "Faturacao", icon: Receipt },
+  { href: "/marcacoes", label: "Marcações", icon: Calendar },
+  { href: "/marcacoes/calendario", label: "Calendário", icon: CalendarDays },
+  { href: "/servicos", label: "Serviços", icon: Wrench },
+  { href: "/faturacao", label: "Faturação", icon: Receipt },
 ];
 
 /**
  * Active state que respeita prefixos: se `pathname` faz match com um item
  * mais especifico (ex: /marcacoes/calendario), o item generico (/marcacoes)
- * nao e considerado ativo.
+ * não e considerado ativo.
  */
 function isItemActive(itemHref: string, pathname: string): boolean {
   if (pathname === itemHref) return true;
@@ -79,7 +79,7 @@ export function AppSidebar({
             <Stethoscope className="h-4 w-4" />
           </div>
           <div className="grid flex-1 text-left text-sm leading-tight">
-            <span className="truncate font-semibold">Consultorio</span>
+            <span className="truncate font-semibold">Consultório</span>
             <span className="truncate text-xs text-muted-foreground">
               Demo
             </span>

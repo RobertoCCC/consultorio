@@ -87,8 +87,8 @@ export default async function PacientesPage({
               <TableHead>Nome</TableHead>
               <TableHead>NIF</TableHead>
               <TableHead>Telefone</TableHead>
-              <TableHead>Proxima marcacao</TableHead>
-              <TableHead className="text-right">Marcacoes</TableHead>
+              <TableHead>Próxima marcacao</TableHead>
+              <TableHead className="text-right">Marcações</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
@@ -123,7 +123,7 @@ export default async function PacientesPage({
                   <TableCell className="text-muted-foreground">
                     {p.appointments[0]
                       ? formatDateShort(p.appointments[0].startsAt)
-                      : "—"}
+                      : "-"}
                   </TableCell>
                   <TableCell className="text-right tabular-nums text-muted-foreground">
                     {p._count.appointments}

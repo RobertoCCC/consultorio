@@ -20,7 +20,7 @@ import { formatCents, formatDateTime } from "@/lib/formatters";
 
 const statusLabel: Record<string, string> = {
   SCHEDULED: "Agendada",
-  COMPLETED: "Concluida",
+  COMPLETED: "Concluída",
   CANCELLED: "Cancelada",
   NO_SHOW: "Faltou",
 };
@@ -88,7 +88,7 @@ export default async function DashboardPage() {
 
   const stats = [
     {
-      label: "Marcacoes hoje",
+      label: "Marcações hoje",
       value: String(appointmentsToday),
       hint: `${appointmentsTodayPending} por confirmar`,
       icon: Calendar,
@@ -101,7 +101,7 @@ export default async function DashboardPage() {
       href: "/pacientes",
     },
     {
-      label: "Receita do mes",
+      label: "Receita do mês",
       value: formatCents(monthRevenueCents),
       hint: "Faturas pagas",
       icon: TrendingUp,
@@ -119,7 +119,7 @@ export default async function DashboardPage() {
       <div>
         <h2 className="text-2xl font-semibold tracking-tight">Dashboard</h2>
         <p className="text-sm text-muted-foreground">
-          Visao geral do consultorio.
+          Visão geral do consultorio.
         </p>
       </div>
 
@@ -159,7 +159,7 @@ export default async function DashboardPage() {
 
       <Card>
         <CardHeader>
-          <CardTitle>Proximas marcacoes</CardTitle>
+          <CardTitle>Próximas marcacoes</CardTitle>
           <CardDescription>
             Lista das marcacoes agendadas a partir de agora.
           </CardDescription>
@@ -167,7 +167,7 @@ export default async function DashboardPage() {
         <CardContent>
           {upcomingAppointments.length === 0 ? (
             <p className="text-sm text-muted-foreground py-4">
-              Sem marcacoes agendadas.
+              Sem marcações agendadas.
             </p>
           ) : (
             <ul className="divide-y -mx-6">

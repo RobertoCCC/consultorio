@@ -145,7 +145,7 @@ export function AppointmentForm({
 
         <div className="grid gap-2">
           <Label htmlFor="serviceId">
-            Servico <span className="text-destructive">*</span>
+            Serviço <span className="text-destructive">*</span>
           </Label>
           <input type="hidden" name="serviceId" value={serviceId} />
           <Select
@@ -153,7 +153,7 @@ export function AppointmentForm({
             onValueChange={(v) => handleServiceChange(v ?? "")}
           >
             <SelectTrigger id="serviceId" aria-invalid={!!state.errors?.serviceId}>
-              <SelectValue placeholder="Selecionar servico..." />
+              <SelectValue placeholder="Selecionar serviço..." />
             </SelectTrigger>
             <SelectContent>
               {services.map((s) => (
@@ -203,7 +203,7 @@ export function AppointmentForm({
 
         <div className="grid gap-2">
           <Label htmlFor="durationMinutes">
-            Duracao (min) <span className="text-destructive">*</span>
+            Duração (min) <span className="text-destructive">*</span>
           </Label>
           <Input
             id="durationMinutes"
@@ -227,7 +227,7 @@ export function AppointmentForm({
             name="notes"
             defaultValue={notesDefault}
             rows={3}
-            placeholder="Observacoes sobre a marcacao..."
+            placeholder="Observações sobre a marcação..."
             aria-invalid={!!state.errors?.notes}
           />
           <FieldError messages={state.errors?.notes} />
@@ -250,8 +250,8 @@ export function AppointmentForm({
           {isPending
             ? "A guardar..."
             : isEdit
-              ? "Guardar alteracoes"
-              : "Criar marcacao"}
+              ? "Guardar alterações"
+              : "Criar marcação"}
         </Button>
       </div>
     </form>

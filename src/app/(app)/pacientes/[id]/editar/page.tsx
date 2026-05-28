@@ -38,7 +38,7 @@ export default async function EditarPacientePage({
           Editar {patient.name}
         </h2>
         <p className="text-sm text-muted-foreground">
-          Actualize os dados do paciente.
+          Atualize os dados do paciente.
         </p>
       </div>
 

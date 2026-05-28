@@ -8,7 +8,7 @@ export const serviceSchema = z.object({
   name: z
     .string()
     .trim()
-    .min(2, "Nome muito curto (minimo 2 caracteres)")
+    .min(2, "Nome muito curto (mínimo 2 caracteres)")
     .max(120, "Nome demasiado longo"),
 
   description: z
@@ -18,15 +18,15 @@ export const serviceSchema = z.object({
     .optional(),
 
   durationMinutes: z.coerce
-    .number({ message: "Duracao tem de ser um numero" })
-    .int("Duracao tem de ser um numero inteiro")
-    .min(5, "Duracao minima 5 minutos")
-    .max(480, "Duracao maxima 8 horas (480 min)"),
+    .number({ message: "Duração tem de ser um numero" })
+    .int("Duração tem de ser um número inteiro")
+    .min(5, "Duração minima 5 minutos")
+    .max(480, "Duração máxima 8 horas (480 min)"),
 
   priceEur: z.coerce
-    .number({ message: "Preco invalido" })
-    .min(0, "Preco nao pode ser negativo")
-    .max(100000, "Preco demasiado alto"),
+    .number({ message: "Preço inválido" })
+    .min(0, "Preço não pode ser negativo")
+    .max(100000, "Preço demasiado alto"),
 });
 
 export type ServiceInput = z.infer<typeof serviceSchema>;

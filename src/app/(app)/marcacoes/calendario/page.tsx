@@ -7,7 +7,7 @@ import { AppointmentsCalendar } from "@/components/appointments-calendar";
 import { prisma } from "@/lib/prisma";
 import { verifySession } from "@/lib/dal";
 
-export default async function CalendarioMarcacoesPage() {
+export default async function CalendarioMarcaçõesPage() {
   await verifySession();
 
   const now = new Date();
@@ -40,7 +40,7 @@ export default async function CalendarioMarcacoesPage() {
           </h2>
           <p className="text-sm text-muted-foreground">
             {events.length}{" "}
-            {events.length === 1 ? "marcacao" : "marcacoes"} de {" "}
+            {events.length === 1 ? "marcação" : "marcações"} de {" "}
             {start.toLocaleDateString("pt-PT")} a {" "}
             {end.toLocaleDateString("pt-PT")}
           </p>
@@ -56,7 +56,7 @@ export default async function CalendarioMarcacoesPage() {
           </Button>
           <Button render={<Link href="/marcacoes/nova" />}>
             <Plus className="h-4 w-4" />
-            Nova marcacao
+            Nova marcação
           </Button>
         </div>
       </div>
@@ -74,7 +74,7 @@ function Legend() {
   return (
     <div className="flex items-center gap-4 flex-wrap text-xs">
       <LegendItem color="#3b82f6" label="Agendada" />
-      <LegendItem color="#10b981" label="Concluida" />
+      <LegendItem color="#10b981" label="Concluída" />
       <LegendItem color="#9ca3af" label="Cancelada" />
       <LegendItem color="#f59e0b" label="Faltou" />
     </div>

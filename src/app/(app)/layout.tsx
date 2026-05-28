@@ -27,7 +27,7 @@ export default async function AppLayout({
           <SidebarTrigger className="-ml-1" />
           <Separator orientation="vertical" className="mr-2 h-4" />
           <h1 className="text-sm font-medium text-muted-foreground">
-            Consultorio
+            Consultório
           </h1>
         </header>
         <main className="flex-1 p-4 md:p-6 lg:p-8">{children}</main>

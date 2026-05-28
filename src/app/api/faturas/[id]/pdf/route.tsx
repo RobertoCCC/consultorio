@@ -37,7 +37,7 @@ export async function GET(
   });
 
   if (!invoice) {
-    return new Response("Fatura nao encontrada", { status: 404 });
+    return new Response("Fatura não encontrada", { status: 404 });
   }
 
   const buffer = await renderToBuffer(<InvoicePDF invoice={invoice} />);

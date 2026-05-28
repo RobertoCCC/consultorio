@@ -48,11 +48,11 @@ export default async function NovaMarcacaoPage({
 
       <div>
         <h2 className="text-2xl font-semibold tracking-tight">
-          Nova marcacao
+          Nova marcação
         </h2>
         <p className="text-sm text-muted-foreground">
-          Seleccione paciente, servico e staff. A duracao e preenchida
-          automaticamente a partir do servico.
+          Selecione paciente, serviço e staff. A duração é preenchida
+          automaticamente a partir do serviço.
         </p>
       </div>
 

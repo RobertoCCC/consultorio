@@ -11,7 +11,7 @@ export default function LoginPage() {
             <div className="flex h-8 w-8 items-center justify-center rounded-md bg-primary text-primary-foreground">
               <Stethoscope className="h-4 w-4" />
             </div>
-            Consultorio
+            Consultório
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-center">
@@ -23,11 +23,11 @@ export default function LoginPage() {
       <div className="relative hidden bg-muted lg:block">
         <div className="absolute inset-0 flex flex-col items-center justify-center gap-4 p-12 text-center">
           <h2 className="text-3xl font-semibold tracking-tight">
-            Gestao simples para consultorios, clinicas e escritorios
+            Gestão simples para consultorios, clínicas e escritórios
           </h2>
           <p className="max-w-md text-muted-foreground">
-            Marcacoes, ficha de cliente, catalogo de servicos e faturacao &mdash;
-            tudo num so sitio, pensado para PMEs portuguesas.
+            Marcações, ficha de cliente, catálogo de serviços e faturação.
+            tudo num só sítio, pensado para PMEs portuguesas.
           </p>
         </div>
       </div>

@@ -24,7 +24,7 @@ function createPrismaClient(): PrismaClient {
   });
 }
 
-// Singleton em dev (hot reload) para nao criar dezenas de pools.
+// Singleton em dev (hot reload) para não criar dezenas de pools.
 export const prisma = globalForPrisma.prisma ?? createPrismaClient();
 
 if (process.env.NODE_ENV !== "production") {

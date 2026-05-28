@@ -43,7 +43,7 @@ export function DeleteServiceButton({
           );
           return;
         }
-        toast.error("Falha ao apagar servico");
+        toast.error("Falha ao apagar serviço");
       }
     });
   };
@@ -60,11 +60,11 @@ export function DeleteServiceButton({
       />
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Apagar servico?</AlertDialogTitle>
+          <AlertDialogTitle>Apagar serviço?</AlertDialogTitle>
           <AlertDialogDescription>
             Tem a certeza que quer apagar <strong>{serviceName}</strong>? Se o
             servico tiver marcacoes ou faturas associadas a operacao falha
-            &mdash; marque como inativo em alternativa.
+            - marque como inativo em alternativa.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>
@@ -74,7 +74,7 @@ export function DeleteServiceButton({
             disabled={isPending}
             className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
           >
-            {isPending ? "A apagar..." : "Apagar servico"}
+            {isPending ? "A apagar..." : "Apagar serviço"}
           </AlertDialogAction>
         </AlertDialogFooter>
       </AlertDialogContent>

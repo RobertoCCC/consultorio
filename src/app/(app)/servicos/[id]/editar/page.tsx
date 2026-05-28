@@ -9,7 +9,7 @@ import { verifySession } from "@/lib/dal";
 
 type Params = Promise<{ id: string }>;
 
-export default async function EditarServicoPage({
+export default async function EditarServiçoPage({
   params,
 }: {
   params: Params;
@@ -38,7 +38,7 @@ export default async function EditarServicoPage({
           Editar {service.name}
         </h2>
         <p className="text-sm text-muted-foreground">
-          Actualize os dados do servico.
+          Atualize os dados do serviço.
         </p>
       </div>
 

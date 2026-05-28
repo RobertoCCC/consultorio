@@ -29,7 +29,7 @@ type Params = Promise<{ id: string }>;
 
 const statusLabel: Record<string, string> = {
   SCHEDULED: "Agendada",
-  COMPLETED: "Concluida",
+  COMPLETED: "Concluída",
   CANCELLED: "Cancelada",
   NO_SHOW: "Faltou",
 };
@@ -72,7 +72,7 @@ export default async function MarcacaoDetailPage({
           render={<Link href="/marcacoes" />}
         >
           <ArrowLeft className="h-4 w-4" />
-          Marcacoes
+          Marcações
         </Button>
         <div className="flex items-center gap-2">
           <Button
@@ -90,7 +90,7 @@ export default async function MarcacaoDetailPage({
       <div className="flex items-start justify-between gap-4 flex-wrap">
         <div>
           <h2 className="text-2xl font-semibold tracking-tight">
-            Marcacao de {appointment.patient.name}
+            Marcação de {appointment.patient.name}
           </h2>
           <p className="text-sm text-muted-foreground tabular-nums">
             {formatDateTime(appointment.startsAt)} • {appointment.durationMinutes}{" "}
@@ -131,7 +131,7 @@ export default async function MarcacaoDetailPage({
             />
             <InfoRow
               icon={<Clock className="h-4 w-4" />}
-              label="Duracao"
+              label="Duração"
               value={`${appointment.durationMinutes} min`}
             />
             <Separator />
@@ -149,7 +149,7 @@ export default async function MarcacaoDetailPage({
             />
             <InfoRow
               icon={<Wrench className="h-4 w-4" />}
-              label="Servico"
+              label="Serviço"
               value={
                 <Link
                   href={`/servicos/${appointment.service.id}`}
@@ -179,7 +179,7 @@ export default async function MarcacaoDetailPage({
               <p className="whitespace-pre-wrap text-sm">{appointment.notes}</p>
             ) : (
               <p className="text-sm text-muted-foreground">
-                Sem notas para esta marcacao.
+                Sem notas para esta marcação.
               </p>
             )}
           </CardContent>

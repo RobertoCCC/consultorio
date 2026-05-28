@@ -10,9 +10,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Consultorio - Gestao para PMEs",
+  title: "Consultório - Gestão para PMEs",
   description:
-    "Plataforma de gestao de consultorios, clinicas e escritorios profissionais. Marcacoes, pacientes, servicos e faturacao num so sitio.",
+    "Plataforma de gestão de consultórios, clínicas e escritórios profissionais. Marcações, pacientes, serviços e faturação num só sítio.",
 };
 
 export default function RootLayout({

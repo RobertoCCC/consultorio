@@ -20,7 +20,7 @@ type SearchParams = Promise<{ status?: string; period?: string }>;
 
 const statusLabel: Record<string, string> = {
   SCHEDULED: "Agendada",
-  COMPLETED: "Concluida",
+  COMPLETED: "Concluída",
   CANCELLED: "Cancelada",
   NO_SHOW: "Faltou",
 };
@@ -67,7 +67,7 @@ function buildPeriodFilter(period: string | undefined) {
   }
 }
 
-export default async function MarcacoesPage({
+export default async function MarcaçõesPage({
   searchParams,
 }: {
   searchParams: SearchParams;
@@ -99,10 +99,10 @@ export default async function MarcacoesPage({
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight">Marcacoes</h2>
+          <h2 className="text-2xl font-semibold tracking-tight">Marcações</h2>
           <p className="text-sm text-muted-foreground">
             {appointments.length}{" "}
-            {appointments.length === 1 ? "marcacao" : "marcacoes"}
+            {appointments.length === 1 ? "marcação" : "marcações"}
           </p>
         </div>
         <div className="flex items-center gap-2">
@@ -115,7 +115,7 @@ export default async function MarcacoesPage({
           </Button>
           <Button render={<Link href="/marcacoes/nova" />}>
             <Plus className="h-4 w-4" />
-            Nova marcacao
+            Nova marcação
           </Button>
         </div>
       </div>
@@ -154,9 +154,9 @@ export default async function MarcacoesPage({
             <TableRow>
               <TableHead>Data e hora</TableHead>
               <TableHead>Paciente</TableHead>
-              <TableHead>Servico</TableHead>
+              <TableHead>Serviço</TableHead>
               <TableHead>Staff</TableHead>
-              <TableHead className="text-right">Duracao</TableHead>
+              <TableHead className="text-right">Duração</TableHead>
               <TableHead>Estado</TableHead>
             </TableRow>
           </TableHeader>
@@ -167,7 +167,7 @@ export default async function MarcacoesPage({
                   colSpan={6}
                   className="text-center text-muted-foreground py-12"
                 >
-                  Sem marcacoes neste filtro.
+                  Sem marcações neste filtro.
                 </TableCell>
               </TableRow>
             ) : (

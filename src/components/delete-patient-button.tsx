@@ -58,7 +58,7 @@ export function DeletePatientButton({
           <AlertDialogTitle>Apagar paciente?</AlertDialogTitle>
           <AlertDialogDescription>
             Tem a certeza que quer apagar <strong>{patientName}</strong>? Esta
-            accao apaga tambem todas as marcacoes deste paciente e nao pode ser
+            ação apaga também todas as marcacoes deste paciente e não pode ser
             desfeita.
           </AlertDialogDescription>
         </AlertDialogHeader>

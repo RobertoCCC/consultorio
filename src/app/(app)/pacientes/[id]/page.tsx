@@ -37,7 +37,7 @@ type Params = Promise<{ id: string }>;
 
 const statusLabel: Record<string, string> = {
   SCHEDULED: "Agendada",
-  COMPLETED: "Concluida",
+  COMPLETED: "Concluída",
   CANCELLED: "Cancelada",
   NO_SHOW: "Faltou",
 };
@@ -184,16 +184,16 @@ export default async function PacienteDetailPage({
             <CardHeader>
               <CardTitle className="text-base flex items-center gap-2">
                 <Calendar className="h-4 w-4" />
-                Marcacoes recentes
+                Marcações recentes
               </CardTitle>
               <CardDescription>
-                Ultimas {patient.appointments.length} marcacoes
+                Últimas {patient.appointments.length} marcacoes
               </CardDescription>
             </CardHeader>
             <CardContent>
               {patient.appointments.length === 0 ? (
                 <p className="text-sm text-muted-foreground py-4">
-                  Sem marcacoes ainda.
+                  Sem marcações ainda.
                 </p>
               ) : (
                 <ul className="divide-y -mx-6">
@@ -225,7 +225,7 @@ export default async function PacienteDetailPage({
                 Faturas
               </CardTitle>
               <CardDescription>
-                Ultimas {patient.invoices.length} faturas
+                Últimas {patient.invoices.length} faturas
               </CardDescription>
             </CardHeader>
             <CardContent>

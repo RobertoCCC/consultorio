@@ -35,7 +35,7 @@ export function DeleteAppointmentButton({
         ) {
           return;
         }
-        toast.error("Falha ao apagar marcacao");
+        toast.error("Falha ao apagar marcação");
       }
     });
   };
@@ -52,10 +52,10 @@ export function DeleteAppointmentButton({
       />
       <AlertDialogContent>
         <AlertDialogHeader>
-          <AlertDialogTitle>Apagar marcacao?</AlertDialogTitle>
+          <AlertDialogTitle>Apagar marcação?</AlertDialogTitle>
           <AlertDialogDescription>
-            Esta accao remove a marcacao permanentemente. Para preservar o
-            historico, considere usar "Cancelar" em alternativa.
+            Esta ação remove a marcacao permanentemente. Para preservar o
+            histórico, considere usar "Cancelar" em alternativa.
           </AlertDialogDescription>
         </AlertDialogHeader>
         <AlertDialogFooter>

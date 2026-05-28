@@ -76,7 +76,7 @@ export function PatientForm({ patient }: { patient?: PatientLite | null }) {
             defaultValue={v("name")}
             required
             autoFocus
-            placeholder="Joao Silva"
+            placeholder="João Silva"
             aria-invalid={!!state.errors?.name}
           />
           <FieldError messages={state.errors?.name} />
@@ -153,7 +153,7 @@ export function PatientForm({ patient }: { patient?: PatientLite | null }) {
             name="notes"
             defaultValue={v("notes")}
             rows={4}
-            placeholder="Observacoes clinicas, alergias, historico..."
+            placeholder="Observações clínicas, alergias, histórico..."
             aria-invalid={!!state.errors?.notes}
           />
           <FieldError messages={state.errors?.notes} />
@@ -174,7 +174,7 @@ export function PatientForm({ patient }: { patient?: PatientLite | null }) {
           {isPending
             ? "A guardar..."
             : isEdit
-              ? "Guardar alteracoes"
+              ? "Guardar alterações"
               : "Criar paciente"}
         </Button>
       </div>

@@ -18,7 +18,7 @@ import { formatCents } from "@/lib/formatters";
 
 type SearchParams = Promise<{ q?: string }>;
 
-export default async function ServicosPage({
+export default async function ServiçosPage({
   searchParams,
 }: {
   searchParams: SearchParams;
@@ -47,16 +47,16 @@ export default async function ServicosPage({
     <div className="flex flex-col gap-6">
       <div className="flex items-center justify-between gap-4 flex-wrap">
         <div>
-          <h2 className="text-2xl font-semibold tracking-tight">Servicos</h2>
+          <h2 className="text-2xl font-semibold tracking-tight">Serviços</h2>
           <p className="text-sm text-muted-foreground">
             {services.length}{" "}
-            {services.length === 1 ? "servico" : "servicos"}
+            {services.length === 1 ? "serviço" : "serviços"}
             {q ? ` para "${q}"` : ""}
           </p>
         </div>
         <Button render={<Link href="/servicos/novo" />}>
           <Plus className="h-4 w-4" />
-          Novo servico
+          Novo serviço
         </Button>
       </div>
 
@@ -78,9 +78,9 @@ export default async function ServicosPage({
           <TableHeader>
             <TableRow>
               <TableHead>Nome</TableHead>
-              <TableHead className="text-right">Duracao</TableHead>
-              <TableHead className="text-right">Preco</TableHead>
-              <TableHead className="text-right">Marcacoes</TableHead>
+              <TableHead className="text-right">Duração</TableHead>
+              <TableHead className="text-right">Preço</TableHead>
+              <TableHead className="text-right">Marcações</TableHead>
               <TableHead>Estado</TableHead>
             </TableRow>
           </TableHeader>
@@ -93,7 +93,7 @@ export default async function ServicosPage({
                 >
                   {q
                     ? `Sem resultados para "${q}"`
-                    : "Sem servicos no catalogo."}
+                    : "Sem serviços no catálogo."}
                 </TableCell>
               </TableRow>
             ) : (

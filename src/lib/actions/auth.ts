@@ -23,7 +23,7 @@ export async function loginAction(
     return {};
   } catch (error) {
     if (error instanceof AuthError) {
-      return { error: "Credenciais invalidas." };
+      return { error: "Credenciais inválidas." };
     }
     // NEXT_REDIRECT precisa de ser re-lancado para o redirect funcionar.
     throw error;
